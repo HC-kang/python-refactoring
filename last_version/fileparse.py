@@ -23,7 +23,7 @@ def parse_csv(lines, select=None, types=None, has_headers=True, delimiter=',', s
         headers = select
 
     records = []
-    for rowno, row in enumerate(rows, 1):
+    for row_no, row in enumerate(rows, 1):
         if not row:
             continue
 
@@ -35,8 +35,8 @@ def parse_csv(lines, select=None, types=None, has_headers=True, delimiter=',', s
                 row = [func(val) for func, val in zip(types, row)]
             except ValueError as e:
                 if not silence_errors:
-                    print(f"Row {rowno}: Couldn't convert {row}")
-                    print(f"Row {rowno}: Reason {e}")
+                    print(f"Row {row_no}: Couldn't convert {row}")
+                    print(f"Row {row_no}: Reason {e}")
                 continue
 
         if headers:

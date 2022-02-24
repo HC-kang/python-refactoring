@@ -45,7 +45,8 @@ def print_report(reportdata):
     for row in reportdata:
         print('%10s %10d %10.2f %10.2f' % row)
 
-# show_report('../Data/portfolio_01.csv', '../Data/prices_01.csv')
+show_report('../Data/portfolio_01.csv', '../Data/prices_01.csv')
+show_report('../Data/portfolio_04_null.csv', '../Data/prices_04_null.csv')
 
 def main(args):
     if len(args) != 3:

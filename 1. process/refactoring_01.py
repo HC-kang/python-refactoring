@@ -2,10 +2,10 @@ import csv
 
 with open('../Data/portfolio_02_empty_row.csv') as f:
     pf = csv.reader(f)
-    hdrs = next(pf)
+    hdr = next(pf)
     pfl = []
     for i in pf:
-        rec = dict(zip(hdrs, i)) # 헤더와 합치기
+        rec = dict(zip(hdr, i)) # 헤더와 합치기
         pfl.append(rec)
         
 with open('../Data/prices_02_empty_row.csv') as f:
@@ -18,13 +18,13 @@ with open('../Data/prices_02_empty_row.csv') as f:
 
 rpt = []
 for p in pfl:
-    cur_prc = float(prcs[p['name']])
-    chg = float(cur_prc) - float(p['price'])
-    rep = (p['name'], int(p['shares']), cur_prc, chg) # 이름, 보유량, 가격, 차익
+    prc2 = float(prcs[p['name']])
+    chg = float(prc2) - float(p['price'])
+    rep = (p['name'], int(p['shares']), prc2, chg) # 이름, 보유량, 가격, 차익
     rpt.append(rep)
 
-hdrs = ('Name','Shares','Price','Change')
-print('%10s %10s %10s %10s' % hdrs)
-print(('-'*10 + ' ')*len(hdrs))
+hdr = ('Name','Shares','Price','Change')
+print('%10s %10s %10s %10s' % hdr)
+print(('-'*10 + ' ')*len(hdr))
 for r in rpt:
     print('%10s %10d %10.2f %10.2f' % r)
