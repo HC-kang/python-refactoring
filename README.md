@@ -45,15 +45,15 @@ for r in rpt:
 
   위 코드는 포트폴리오와 가격표 csv파일을 가지고 현재 포트폴리오가 얼마나 손익을 보고있는지를 사람 눈으로 보기 좋게 프린트 해 주는 단순한 프로그램입니다.
 
-![< portfolio.csv 예시>](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2586d3a6-87dd-4fe5-adee-ec05da3c8232/Untitled.png)
+![image](https://user-images.githubusercontent.com/81678439/174431640-78d12e56-ebdd-4d20-b46d-798fcea7226c.png)
 
 < portfolio.csv 예시>
 
-![< prices.csv 예시>](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aa4751c2-d084-4b59-9360-d5fc4230cd75/Untitled.png)
+![image](https://user-images.githubusercontent.com/81678439/174431698-363dcb2f-6763-4e06-a995-17b8fab8b88c.png)
 
 < prices.csv 예시>
 
-![<결과값 예시>](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6793a4a3-aa5c-4d2b-b497-958a0b4fe5c3/Untitled.png)
+![image](https://user-images.githubusercontent.com/81678439/174431712-8e979fb3-a366-44bf-8600-87a8b5d82a85.png)
 
 <결과값 예시>
 
@@ -162,11 +162,11 @@ if __name__ == '__main__':
 
   그런데 이 코드로 서비스를 하다 보니, 종종 이런 오류가 발생합니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c81fa42-0b36-4443-bdce-f08f1f3a1f08/Untitled.png)
+![image](https://user-images.githubusercontent.com/81678439/174431731-c67ef92f-4d7a-4c9c-af6d-8dbfa55fd671.png)
 
   이 코드는 뭔가 복잡하고 어려운 코드이니, 뭐든간에 힘들고 복잡한 과정을 거쳐서 원인을 찾아냅니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/289eeb7e-a4a6-4f3c-96b2-96738a131890/Untitled.png)
+![image](https://user-images.githubusercontent.com/81678439/174431737-e5281694-8dc4-4056-ad7c-078e9c13f0e6.png)
 
   원인을 찾다보니, 데이터를 작성하던 사용자가 실수로 엔터를 한번 더 쳤나봅니다.(9행) 공백이 들어가면서, length가 0이라 dictionary로 변경을 할 수 없는게 원인이었습니다. 
 
@@ -352,7 +352,7 @@ if __name__ == '__main__':
 
   그런데 어느 날, 또다른 이슈가 보고됩니다. 음.. 이번에도 역시 긴 시간을 들여 복잡하고 어려운 코드를 하나씩 뜯어보면서 원인을 찾습니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/430634d3-3195-4661-b329-937e66bcde78/Untitled.png)
+![image](https://user-images.githubusercontent.com/81678439/174431754-88791706-ad3b-4dc4-bc63-f0a9211fd77d.png)
 
   이번에는 타입변경 과정에서 뭔가 문제가 있는 것 같습니다. 이전과 같이 매우 힘들고 어려운 과정을 거쳐서 원인을 찾아보니, 역시나 아까 마음에 안들던 부분에 문제가 좀 있었습니다. 
 
